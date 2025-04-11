@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>login</title>
+</head>
+<body>
 <?php
 // Database connection credentials
 $host = "localhost";
@@ -53,13 +62,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             // Password didn't match
             echo "Wrong Password!";
+            echo "<p>Try Again</p> <a href='login.html'>Login</a>";
         }
     } else {
         // No user found with given email
         echo "No User Found. Please Signup.";
+        echo "<p>New user?</p> <a href='signup.html'>Signup</a>";
     }
 }
 
 // Close the database connection
 mysqli_close($conn);
 ?>
+
+    
+</body>
+</html>
