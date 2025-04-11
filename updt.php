@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Record Updated Successfully!";
 
             // Redirect to the 'add.php' page after successful insertion
-            header("Location: add.php");
+            header("Location: records.php");
 
         } else {
             // If the query execution fails, display an error message
